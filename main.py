@@ -94,7 +94,7 @@ def get_get_img_prediction(img_path: str) -> dict:
 
 
 if __name__ == '__main__':
-    for path in list(tqdm(Path(test_photos_path).glob('*.jpg')))[0:1]:
+    for path in list(tqdm(Path(test_photos_path).glob('*.jpg'))):
         prediction = get_get_img_prediction(str(path))
 
         print(f'{path}: {prediction}')
